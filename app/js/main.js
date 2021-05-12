@@ -1,27 +1,65 @@
+const condition = document.querySelector('.condition');
+const links = document.querySelector('.links');
 
 const misteryFlower = document.querySelector('.mistery-flower');
 const present = document.querySelector('.present');
 const again = document.querySelector('.again');
 
+let ok = document.querySelector('.ok');
+let answerBtn = document.querySelector('.answear__btn');
 
-document.querySelector('.answear__btn').addEventListener('click', answearFlower);
+let answearInputFlower = document.querySelector('.answear__input--flower');
+let answearInputChampagne = document.querySelector('.answear__input--champagne');
+let answearInputMartini = document.querySelector('.answear__input--martini');
+let answearInputСondom = document.querySelector('.answear__input--condom');
+let answearInputDress = document.querySelector('.answear__input--dress');
+let answearInputAtlas = document.querySelector('.answear__input--atlas');
+let answearInputSwimsuit = document.querySelector('.answear__input--swimsuit');
 
-document.querySelector('.answear__btn').addEventListener('click', answearChampagne);
+if (ok) {
+  ok .addEventListener('click', (e) => {
+    e.preventDefault();
+    condition.classList.remove('show');
+    condition.classList.add('hiden');
+    links.classList.remove('hiden');
+    links.classList.add('show');
 
-document.querySelector('.answear__btn').addEventListener('click', answearMartin);
+  });
+};
 
-document.querySelector('.answear__btn').addEventListener('click', answearСondom);
+if (answearInputFlower) {
+  answerBtn.addEventListener('click', answearFlower);
+};
 
-document.querySelector('.answear__btn').addEventListener('click', answearDress);
+if (answearInputChampagne) {
+  answerBtn.addEventListener('click', answearChampagne);
+};
 
-document.querySelector('.answear__btn').addEventListener('click', answearAtlas);
 
-document.querySelector('.answear__btn').addEventListener('click', answearSwimsuit);
+if (answearInputMartini) {
+  answerBtn.addEventListener('click', answearMartin);
+};
+
+if (answearInputСondom) {
+  answerBtn.addEventListener('click', answearСondom);
+};
+
+if (answearInputDress) {
+  answerBtn.addEventListener('click',  answearDress);
+};
+
+if (answearInputAtlas) {
+  answerBtn.addEventListener('click',  answearAtlas);
+};
+
+if (answearInputSwimsuit) {
+  answerBtn.addEventListener('click',  answearSwimsuit);
+};
 
 
 function answearFlower(e) {
   e.preventDefault();
-  let answear = document.querySelector('.answear__input--flower').value;
+  let answear = answearInputFlower.value;
   if ( answear == 'Квітка' || answear == 'квітка' ) {
     misteryFlower.classList.remove('show');
     present.classList.add('show');
@@ -33,7 +71,7 @@ function answearFlower(e) {
 
 function answearChampagne(e) {
   e.preventDefault();
-  let answear = document.querySelector('.answear__input--champagne').value;
+  let answear = answearInputChampagne.value;
   if ( answear == 'Шампанське' || answear == 'шампанське' ) {
     misteryFlower.classList.remove('show');
     present.classList.add('show');
@@ -45,7 +83,7 @@ function answearChampagne(e) {
 
 function answearMartin(e) {
   e.preventDefault();
-  let answear = document.querySelector('.answear__input--martini').value;
+  let answear = answearInputMartini.value;
   if ( answear == 'Мартіні' || answear == 'мартіні' ) {
     misteryFlower.classList.remove('show');
     present.classList.add('show');
@@ -57,7 +95,7 @@ function answearMartin(e) {
 
 function answearСondom(e) {
   e.preventDefault();
-  let answear = document.querySelector('.answear__input--condom').value;
+  let answear = answearInputСondom.value;
   if ( answear == 'Презерватив' || answear == 'презерватив' ) {
     misteryFlower.classList.remove('show');
     present.classList.add('show');
@@ -69,7 +107,7 @@ function answearСondom(e) {
 
 function answearDress(e) {
   e.preventDefault();
-  let answear = document.querySelector('.answear__input--dress').value;
+  let answear = answearInputDress.value;
   if ( answear == 'Плаття' || answear == 'плаття' ) {
     misteryFlower.classList.remove('show');
     present.classList.add('show');
@@ -81,7 +119,7 @@ function answearDress(e) {
 
 function answearAtlas(e) {
   e.preventDefault();
-  let answear = document.querySelector('.answear__input--atlas').value;
+  let answear = answearInputAtlas.value;
   if ( answear == 'Атлас' || answear == 'атлас' ) {
     misteryFlower.classList.remove('show');
     present.classList.add('show');
@@ -93,7 +131,7 @@ function answearAtlas(e) {
 
 function answearSwimsuit(e) {
   e.preventDefault();
-  let answear = document.querySelector('.answear__input--swimsuit').value;
+  let answear = answearInputSwimsuit.value;
   if ( answear == 'Купальник' || answear == 'купальник' ) {
     misteryFlower.classList.remove('show');
     present.classList.add('show');

@@ -50,7 +50,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  display: none;
 
   p {
     margin: 0;
@@ -90,7 +89,7 @@
 }
 
 .links {
-  display: none;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -225,15 +224,12 @@ a:visited {
   opacity: 1;
   transform: translateX(0);
   transition: all .8s ease;
+
 }
 
 .hiden {
   position: absolute;
   opacity: 0;
   transform: translateX(-300%);
-  width: 0;
-  height: 0;
-  margin: 0;
-  padding: 0;
   transition: all .8s ease;
 }
