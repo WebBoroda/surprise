@@ -11,10 +11,10 @@ html {
 
 body {
   margin: 0;
-  font-size: 1.6rem;
-  font-family: 'Nunito', sans-serif;
-  background-color: var(--color-white);
-  color: var(--color-main-text);
+
+  font-size: 1rem;
+  background: radial-gradient(72.72% 167.91% at 50% 50%, #B70000 0%, #430000 77.47%);
+  color: white;
 }
 
 img {
@@ -40,8 +40,13 @@ ul {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  align-items: center;
   min-height: 100vh;
+  padding: 20px 10px;
 }
+
+
+
 
 footer {
   margin-top: auto;
@@ -49,14 +54,6 @@ footer {
 
 .is-hidden {
   display: none !important; // stylelint-disable-line declaration-no-important
-}
-
-.for-mobile {
-  display: none;
-
-  @include mobile {
-    display: block;
-  }
 }
 
 .error {
@@ -69,11 +66,6 @@ footer {
   cursor: pointer;
 }
 
-.container {
-  margin: 0 auto;
-  padding: 0 10px;
-  max-width: 1200px;
-}
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
